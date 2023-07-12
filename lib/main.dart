@@ -30,6 +30,7 @@ class MyWidget extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         title: const Text(
+// 최상단 문구 설정
           "처음처럼",
           style: TextStyle(
             fontSize: 26,
@@ -53,6 +54,7 @@ class MyWidget extends StatelessWidget {
                   vertical: 10,
                 ),
                 child: const Text(
+// 한 마디 설정
                   "뭔가 멋있는 한 마디",
                   style: TextStyle(
                     fontSize: 18,
@@ -67,6 +69,7 @@ class MyWidget extends StatelessWidget {
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: const Text(
+// 팀 소개 설정
                   "팀 소개",
                   style: TextStyle(
                     fontSize: 22,
@@ -84,16 +87,18 @@ class MyWidget extends StatelessWidget {
                 itemCount: 3,
                 itemBuilder: (context, index) {
                   final titles = [
+// 팀소개 카드 내부 문구 설정
                     "팀 소개 😖\n안녕하세요 5조 처음처럼 입니다.",
                     "팀 목표 😤\n소통과 화합, 논란없는 한 주 보내기",
                     "팀 좌우명 🤔\n초심을 잃지말자!\n남은 기간 무사히 보내기!",
                   ];
                   final profileTitle = titles[index];
                   final imageUrls = [
+// 팀 소개 카드 내부 이미지 설정
                     "https://postfiles.pstatic.net/MjAyMzA3MTFfNjcg/MDAxNjg5MDc2ODU0NzQy.Zlm0asRfE0ZM-qjYJfWdBa1_xpgDyi-ZNR_36Ldabtkg.3AafosB5KONaaQS3Ylo9oHbcErX4MrrluFNh4yIRMc4g.PNG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80.PNG?type=w966",
                     "https://postfiles.pstatic.net/MjAyMzA3MTFfNjcg/MDAxNjg5MDc2ODU0NzQy.Zlm0asRfE0ZM-qjYJfWdBa1_xpgDyi-ZNR_36Ldabtkg.3AafosB5KONaaQS3Ylo9oHbcErX4MrrluFNh4yIRMc4g.PNG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80.PNG?type=w966",
                     "https://postfiles.pstatic.net/MjAyMzA3MTFfNjcg/MDAxNjg5MDc2ODU0NzQy.Zlm0asRfE0ZM-qjYJfWdBa1_xpgDyi-ZNR_36Ldabtkg.3AafosB5KONaaQS3Ylo9oHbcErX4MrrluFNh4yIRMc4g.PNG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80.PNG?type=w966",
-                  ]; // 팀 소개 카드 사진 추가
+                  ]; 
 
                   return Container(
                     width: 210,
@@ -147,6 +152,7 @@ class MyWidget extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
+// 팀 카드 아래 문구 설정
                         "이 사람들이 더 궁금하다면?",
                         style: TextStyle(
                           fontSize: 22,
@@ -174,6 +180,7 @@ class MyWidget extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 40,
                             backgroundImage: NetworkImage(
+// 팀원 1 이미지 설정
                               "https://postfiles.pstatic.net/MjAyMzA3MTJfMjEy/MDAxNjg5MTM2NzcwODU4._gnYhu6rRtB4f-uNA4yN6X-hQu1SlET7QbYKSanZh9sg.vcaU-U-hjd9rDnyZ37vmgkAjxraYdzIN6tgW88-Y9Dsg.JPEG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80.jpeg?type=w966",
                             ),
                             backgroundColor: Colors.transparent,
@@ -191,6 +198,7 @@ class MyWidget extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 40,
                             backgroundImage: NetworkImage(
+// 팀원 2 이미지 설정
                               "https://postfiles.pstatic.net/MjAyMzA3MTJfMjQ3/MDAxNjg5MTM2NzcwODYx.XdST9KLvtFch_dNrgMwTHsL3KNK13i2TmiNvkZ9RGykg.POUfi8Swa4jcs8OH_NId3zzIiGGx0WhVXT1gqPs7y9Ug.JPEG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80_(1).jpeg?type=w966",
                             ),
                             backgroundColor: Colors.transparent,
@@ -208,6 +216,7 @@ class MyWidget extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 40,
                             backgroundImage: NetworkImage(
+// 팀원 3 이미지 설정
                               "https://postfiles.pstatic.net/MjAyMzA3MTJfMzAw/MDAxNjg5MTM2NzcwODQ3.sqjvIQtO-Za6Wt4liDXKEIyCJ71aeLAfcoaP3FqlSMQg.UCKoNaNlWs8ADfT26ImYwM6hZVCFumoAaNavTY9iCwkg.JPEG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80_(3).jpeg?type=w966",
                             ),
                             backgroundColor: Colors.transparent,
@@ -225,6 +234,7 @@ class MyWidget extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 40,
                             backgroundImage: NetworkImage(
+// 팀원 4 이미지 설정
                               "https://postfiles.pstatic.net/MjAyMzA3MTJfMjI3/MDAxNjg5MTM2NzcwODQ4.8fH40YeNJJMmj2opPAruZnXi_mj9-jXkOmZLJnImBgAg.tYHWvyl9MmgdEd575iqE-FM37QOc9fgbi6lNpPG4Ii8g.JPEG.blamezz/%EC%9D%B4%EB%AF%B8%EC%A7%80_(2).jpeg?type=w966",
                             ),
                             backgroundColor: Colors.transparent,
