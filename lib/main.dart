@@ -11,6 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        canvasColor:
+            Colors.transparent, // 상세페이지에서 showmodalbottomsheet 배경색 투명으로 설정
+      ),
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
@@ -22,88 +26,113 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 500,
-          ),
-          Text(
-            "이 사람들이 더 궁금하다면?",
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+    return MaterialApp(
+      theme: ThemeData(
+        canvasColor:
+            Colors.transparent, // 상세페이지에서 showmodalbottomsheet 배경색 투명으로 설정
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.white, // 16줄 때문에 배경화면 검정색으로 되면 요거 설정!
+        body: Container(
+          child: Column(
             children: [
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NextPage(),
-                    ),
-                  );
-                },
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: Image.network(
-                      "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbartTp%2Fbtsm92VM7Fi%2FOM5ehYtNhk740vPtZUrQjk%2Fimg.jpg",
-                      width: 100,
-                      height: 100,
-                      fit: BoxFit.cover),
-                ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.5,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NextPage(),
-                    ),
-                  );
-                },
-                child: Image.network(
-                  "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbartTp%2Fbtsm92VM7Fi%2FOM5ehYtNhk740vPtZUrQjk%2Fimg.jpg",
-                  width: 30,
-                  height: 30,
-                  fit: BoxFit.cover,
-                ),
+              // 텍스트
+              Text(
+                "이 사람들이 더 궁금하다면?",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NextPage(),
-                    ),
-                  );
-                },
-                child: Image.network(
-                  "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbartTp%2Fbtsm92VM7Fi%2FOM5ehYtNhk740vPtZUrQjk%2Fimg.jpg",
-                  width: 30,
-                  height: 30,
-                  fit: BoxFit.cover,
+              Container(
+                //overflow 방지용
+                width: MediaQuery.of(context).size.width * 1,
+                height: MediaQuery.of(context).size.height * 0.1,
+                decoration: BoxDecoration(
+                  color: Colors.amber,
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const NextPage(),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    //person_1
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Next_Page(),
+                          ),
+                        );
+                      },
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(
+                          "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrO5OY%2FbtsnhSk6px0%2FE7RspYyQ47acPHz8dAYbdK%2Fimg.png",
+                        ),
+                        backgroundColor: Colors.transparent,
+                      ),
                     ),
-                  );
-                },
-                child: Image.network(
-                  "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbartTp%2Fbtsm92VM7Fi%2FOM5ehYtNhk740vPtZUrQjk%2Fimg.jpg",
-                  width: 30,
-                  height: 30,
-                  fit: BoxFit.cover,
+                    //person_2
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Next_Page(),
+                          ),
+                        );
+                      },
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(
+                          "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrO5OY%2FbtsnhSk6px0%2FE7RspYyQ47acPHz8dAYbdK%2Fimg.png",
+                        ),
+                        backgroundColor: Colors.transparent,
+                      ),
+                    ),
+                    //person_3
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Next_Page(),
+                          ),
+                        );
+                      },
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(
+                          "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrO5OY%2FbtsnhSk6px0%2FE7RspYyQ47acPHz8dAYbdK%2Fimg.png",
+                        ),
+                        backgroundColor: Colors.transparent,
+                      ),
+                    ),
+                    //person_4
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Next_Page(),
+                          ),
+                        );
+                      },
+                      child: CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(
+                          "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbrO5OY%2FbtsnhSk6px0%2FE7RspYyQ47acPHz8dAYbdK%2Fimg.png",
+                        ),
+                        backgroundColor: Colors.transparent,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+              )
             ],
           ),
-        ],
+        ),
       ),
     );
   }
